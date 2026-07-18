@@ -1,7 +1,15 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Library {
     private ArrayList<Book> books = new ArrayList<>();
+    private HashMap<Integer,Book> bookHashMap = new HashMap<>();
+    public Book findBookById(int id){
+        return bookHashMap.get(id);
+    }
+    public void addBookById(int id, Book book){
+        bookHashMap.put(id, book);
+    }
     public void addBook(Book book){
         books.add(book);
     }
